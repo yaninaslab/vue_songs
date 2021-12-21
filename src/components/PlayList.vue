@@ -1,19 +1,22 @@
 <template>
     <div>
         <h2 class="playlist">My Playlist</h2>
-        <button @click="add_song" ref="btn">Add Song</button>
+        <h2 v-for="song in songs" :key="song.id">
+         {{ song.title }}
+          {{ song.artist }}</h2>
+        
     </div>
 </template>
 
 <script>
     export default {
         name: "play-list",
-        methods: {
-            add_song() {
-                this.$emit('song_added', "Song added to the playlist");
-                this.$refs['btn'].style.background = "lightblue";
-            },
-        },
+        props: {
+           songs: Array,
+
+       },
+        
+
 
     }
 </script>
