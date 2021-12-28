@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Welcome to My Music Collection</h1>
-        <button @click="add_song">Add Song</button>
+        <!--<button @click="add_song">Add Song</button>-->
         <song-list :songs="songs" @select_song="add_that_song"></song-list>
         <play-list :songs="selected_songs"></play-list>
     </div>
@@ -54,7 +54,7 @@ import PlayList from './PlayList.vue'
          data() {
             return {
                 selected_songs: [
-                    {id: 1, title: 'My Way', artist: 'Cassette'},
+                    
                 ],
                 songs: [
                     {id: 1, title: 'My Way', artist: 'Cassette'},
@@ -62,7 +62,11 @@ import PlayList from './PlayList.vue'
                     {id: 3, title: 'In Your Eyes', artist: 'The Weeknd'},
                     {id: 4, title: 'Out of Time', artist: 'Why So Sad'},
                     {id: 5, title: 'So Long', artist: 'MALFA'},
-                    {id: 6, title: "Test", artist: "Test123"}
+                    {id: 6, title: "Lost on You", artist: "LP"},
+                    {id: 7, title: "Life", artist: "Zivert"},
+                    {id: 8, title: "It Feels so Good", artist: "Sonique"},
+                    {id: 9, title: "Je vuex", artist: "ZAZ"},
+                    {id: 10, title: "Ride It", artist: "Regard"}
                 ]
             }
         },
